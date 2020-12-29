@@ -35,6 +35,9 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
          cmd: install
+      # Install classnames
+      - name: Install classnames
+        run: yarn add classnames
        #build react app with yarn
       - name: build react app
         run: yarn build
