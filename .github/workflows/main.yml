@@ -35,15 +35,15 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
          cmd: install
+     # install axious
+      - name: install axios
+        run:  npm install -g axios
        #build react app with yarn
       - name: build react app
         run: yarn build
        # install surge
       - name: install surge
         run: npm install -g surge
-       # install axious
-      - name: install axios
-        run:  npm install -g axios
          # run surge
       - name: run surge
         run: surge ./build covid-19-aezaz-ali-1997-react-app.surge.sh --token ${{secrets.SURGE_TOKEN}}     
