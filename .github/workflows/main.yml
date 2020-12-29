@@ -35,9 +35,6 @@ jobs:
         uses: borales/actions-yarn@v2.0.0
         with:
          cmd: install
-     # install axious
-      - name: install axios
-        run: npm install axios
        #build react app with yarn
       - name: build react app
         run: yarn build
