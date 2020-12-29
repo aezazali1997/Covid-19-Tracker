@@ -37,7 +37,7 @@ jobs:
          cmd: install
      # install axious
       - name: install axios
-        run:  npm install -g axios
+        run:  yarn add axios
        #build react app with yarn
       - name: build react app
         run: yarn build
