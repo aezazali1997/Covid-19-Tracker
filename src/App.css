@@ -4,3 +4,15 @@
   justify-content: center;
   align-items: center;
 }
+.image-corona{
+  width: 370px;
+  margin-top: 50px;
+}
+@media (max-width:770px){
+  .image-corona{
+    width: 100%;
+  }
+  .main-container{
+    margin: 0 10%;
+  }
+}

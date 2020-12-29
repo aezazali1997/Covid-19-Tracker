@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { fetchAPI } from "./components/api";
+import ImageSRC from "./images/image.png";
 import { Cards, Chart, CountryPicker } from "./components";
 
 function App() {
@@ -10,19 +11,25 @@ function App() {
 	useEffect(() => {
 		const fetcher = async () => {
 			const response = await fetchAPI();
-			setData(response);
+			if (response) {
+				setData(response);
+			}
 		};
 		fetcher();
 	}, []);
 	const handleChange = async (fetchedCountry) => {
-		const response = await fetchAPI(fetchedCountry);
-		console.log(response);
+		const data = await fetchAPI(fetchedCountry);
+		if (data) {
+			setData(data);
+			setCountry(fetchedCountry);
+		}
 	};
 	return (
 		<div className="main-container">
+			<img src={ImageSRC} className="image-corona" alt="corona virus image" />
 			<Cards value={data} />
 			<CountryPicker handler={handleChange} />
-			<Chart />
+			<Chart data={data} countryData={country} />
 		</div>
 	);
 }
