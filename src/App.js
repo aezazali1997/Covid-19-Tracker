@@ -26,7 +26,7 @@ function App() {
 	};
 	return (
 		<div className="main-container">
-			<img src={ImageSRC} className="image-corona" alt="corona virus image" />
+			<img src={ImageSRC} className="image-corona" />
 			<Cards value={data} />
 			<CountryPicker handler={handleChange} />
 			<Chart data={data} countryData={country} />

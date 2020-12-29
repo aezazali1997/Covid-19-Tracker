@@ -9,7 +9,7 @@ const CountryPicker = ({ handler }) => {
 			setCountries(await fetchCountries());
 		};
 		fetchData();
-	}, [fetchCountries]);
+	}, []);
 	return (
 		<FormControl className={styles.formControl}>
 			<NativeSelect
