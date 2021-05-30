@@ -38,6 +38,9 @@ jobs:
       # Install classnames
       - name: Install classnames
         run: sudo yarn add classnames
+      # Install material-ui
+      - name: Install material-ui
+        run: sudo yarn add material-ui
        #build react app with yarn
       - name: build react app
         run: sudo yarn build
