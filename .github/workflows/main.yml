@@ -40,7 +40,7 @@ jobs:
         run: sudo yarn add classnames
       # Install material-ui
       - name: Install material-ui
-        run: sudo yarn add material-ui
+        run: sudo yarn add material-ui/core
        #build react app with yarn
       - name: build react app
         run: sudo yarn build
