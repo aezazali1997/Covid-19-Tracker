@@ -37,10 +37,10 @@ jobs:
          cmd: install
       # Install classnames
       - name: Install classnames
-        run: yarn add classnames
+        run: sudo yarn add classnames
        #build react app with yarn
       - name: build react app
-        run: yarn build
+        run: sudo yarn build
        # install surge
       - name: install surge
         run: npm install -g surge
